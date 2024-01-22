@@ -23,13 +23,19 @@ names(childcare_data)
 # Select center id, ward number, total spaces, and type(non-profit/commercial)
 cleaned_childcare_data <- 
   clean_names(data) |>
-  select(x_id, ward, totspace, auspice) |>
-  mutate(
-    ward = as.character(ward)
-  )
+  select(x_id, ward, totspace, auspice) 
 
-cleaned_childcare_data
+# Summarize child data by total spots
+summarized_child_care_data <-
+  cleaned_childcare_data |>
+  summarise(total_spots = sum(totspace),
+            .by = ward) 
 
+# Order summarized child care data by ward number
+summarized_child_care_data <-
+  summarized_child_care_data |>
+  arrange(summarized_child_care_data, ward)
+summarized_child_care_data
 
 # Read and clean ward name data 
 
@@ -46,12 +52,12 @@ ward_name_data
 census_data <- read_csv("inputs/data/raw_census_data.csv")
 
 # Get subset of data covering total population and population under 14 by ward 
-population_data <- census_data[c(18:21),c(1:27)]
+population_data <- census_data[c(19:21),c(1,3:27)]
 
 population_data
 
 # Get subset of data covering average/total/and median household incomes by ward
-income_data <- census_data[c(1383:1384),c(1:27)]
+income_data <- census_data[c(1383:1384),c(1,3:27)]
 income_data
 
 # Merges income and population subsets together 
@@ -75,21 +81,19 @@ cleaned_census_data <- cleaned_census_data |>
 
 # Adds column to indicate wards
 cleaned_census_data <- 
-  cleaned_census_data |> add_column(ward = 0:25, .before = "Total - Age")
+  cleaned_census_data |> add_column(ward = 1:25, .before = "0 to 4 years")
 
-# Renames first ward "0" to Toronto (City total)
+# Makes ward numbers into characters
 cleaned_census_data <-
   cleaned_census_data |>
   mutate(
     ward = as.character(ward)
   ) 
-cleaned_census_data[cleaned_census_data == 0] <- "Toronto"
 
 # Rename variable names 
 cleaned_census_data <-
   cleaned_census_data |>
-  rename(pop_total = `Total - Age`,
-         pop_0_to_4 = `0 to 4 years`,
+  rename(pop_0_to_4 = `0 to 4 years`,
          pop_5_to_9 = `5 to 9 years`,
          pop_10_to_14 = `10 to 14 years`,
          avg_hh_income = `Average total income of households in 2020 ($)`,
@@ -100,7 +104,6 @@ cleaned_census_data <-
 cleaned_census_data <-
   cleaned_census_data |>
   mutate(
-    pop_total = as.integer(pop_total),
     pop_0_to_4 = as.integer(pop_0_to_4),
     pop_5_to_9 = as.integer(pop_5_to_9),
     pop_10_to_14 = as.integer(pop_10_to_14),
@@ -109,14 +112,22 @@ cleaned_census_data <-
   ) 
 
 
+# Add total child care spots count to census data
+merged_census_childcare <- cbind(cleaned_census_data, summarized_child_care_data["total_spots"])
+
+merged_census_childcare <- cbind(merged_census_childcare, total_under_15 = rowSums(merged_census_childcare[2:4]))
+
 #### Save data ####
 
-# Save cleaned census data 
+# Save cleaned child care data 
+write_csv(cleaned_childcare_data, "outputs/data/child_care_data.csv")
+
+# Save cleaned ward census data 
 write_csv(cleaned_census_data, "outputs/data/census_data.csv")
 
 # Save cleaned ward name data 
 write_csv(ward_name_data, "outputs/data/ward_names.csv")
 
-# Save cleaned child care data 
-write_csv(cleaned_childcare_data, "outputs/data/child_care_data.csv")
+# Save merged child care spots and ward census data 
+write_csv(merged_census_childcare, "outputs/data/merged_ward_data.csv")
 
