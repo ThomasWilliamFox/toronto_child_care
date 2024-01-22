@@ -1,0 +1,1064 @@
+x_id,ward,totspace,auspice
+1,3,164,Non Profit Agency
+2,8,83,Non Profit Agency
+3,25,102,Non Profit Agency
+4,10,65,Non Profit Agency
+5,20,26,Non Profit Agency
+6,24,62,Non Profit Agency
+7,6,49,Non Profit Agency
+8,24,46,Commercial Agency
+9,19,51,Non Profit Agency
+10,8,153,Non Profit Agency
+11,3,189,Non Profit Agency
+12,24,94,Commercial Agency
+13,4,184,Non Profit Agency
+14,19,143,Non Profit Agency
+15,1,81,Non Profit Agency
+16,14,40,Non Profit Agency
+17,1,64,Commercial Agency
+18,24,143,Commercial Agency
+19,1,83,Commercial Agency
+20,24,110,Non Profit Agency
+21,5,44,Non Profit Agency
+22,7,100,Commercial Agency
+23,14,58,Non Profit Agency
+24,24,49,Non Profit Agency
+25,3,26,Non Profit Agency
+26,17,95,Non Profit Agency
+27,14,76,Non Profit Agency
+28,3,95,Commercial Agency
+29,19,182,Non Profit Agency
+30,19,90,Non Profit Agency
+31,1,72,Non Profit Agency
+32,2,64,Commercial Agency
+33,15,125,Non Profit Agency
+34,24,104,Commercial Agency
+35,5,46,Commercial Agency
+36,2,41,Non Profit Agency
+37,9,54,Non Profit Agency
+38,1,41,Non Profit Agency
+39,15,36,Non Profit Agency
+40,10,140,Non Profit Agency
+41,24,82,Non Profit Agency
+42,18,166,Non Profit Agency
+43,15,99,Non Profit Agency
+44,2,110,Non Profit Agency
+45,3,153,Non Profit Agency
+46,5,41,Non Profit Agency
+47,14,152,Non Profit Agency
+48,24,41,Commercial Agency
+49,17,49,Non Profit Agency
+50,24,72,Non Profit Agency
+51,6,109,Commercial Agency
+52,10,67,Non Profit Agency
+53,11,36,Non Profit Agency
+54,5,56,Commercial Agency
+55,12,25,Non Profit Agency
+56,25,52,Non Profit Agency
+57,19,120,Non Profit Agency
+58,5,105,Commercial Agency
+59,21,79,Non Profit Agency
+60,10,30,Non Profit Agency
+61,12,114,Non Profit Agency
+62,1,73,Non Profit Agency
+63,24,88,Commercial Agency
+64,3,125,Non Profit Agency
+65,1,98,Non Profit Agency
+66,8,93,Commercial Agency
+67,5,69,Non Profit Agency
+68,5,26,Non Profit Agency
+69,17,100,Non Profit Agency
+70,14,110,Non Profit Agency
+71,19,80,Commercial Agency
+72,1,76,Commercial Agency
+73,9,133,Non Profit Agency
+74,1,100,Non Profit Agency
+75,8,170,Non Profit Agency
+76,11,49,Non Profit Agency
+77,9,175,Non Profit Agency
+78,5,62,Non Profit Agency
+79,19,118,Non Profit Agency
+80,12,105,Non Profit Agency
+81,5,36,Non Profit Agency
+82,23,118,Commercial Agency
+83,2,70,Commercial Agency
+84,1,99,Commercial Agency
+85,2,67,Non Profit Agency
+86,22,138,Non Profit Agency
+87,12,80,Non Profit Agency
+88,24,65,Commercial Agency
+89,1,90,Commercial Agency
+90,17,70,Commercial Agency
+91,5,60,Commercial Agency
+92,21,71,Commercial Agency
+93,5,66,Non Profit Agency
+94,6,74,Non Profit Agency
+95,12,49,Non Profit Agency
+96,21,97,Commercial Agency
+97,12,274,Non Profit Agency
+98,21,86,Non Profit Agency
+99,5,151,Non Profit Agency
+100,2,108,Non Profit Agency
+101,22,81,Commercial Agency
+102,3,93,Commercial Agency
+103,23,86,Non Profit Agency
+104,14,245,Non Profit Agency
+105,21,69,Commercial Agency
+106,21,49,Non Profit Agency
+107,13,46,Non Profit Agency
+108,6,174,Non Profit Agency
+109,7,137,Commercial Agency
+110,12,316,Non Profit Agency
+111,11,181,Non Profit Agency
+112,23,78,Commercial Agency
+113,21,82,Non Profit Agency
+114,23,142,Commercial Agency
+115,12,54,Non Profit Agency
+116,25,57,Non Profit Agency
+117,1,54,Public (City Operated) Agency
+118,14,43,Non Profit Agency
+119,6,120,Non Profit Agency
+120,22,105,Non Profit Agency
+121,7,90,Commercial Agency
+122,21,82,Non Profit Agency
+123,16,102,Non Profit Agency
+124,21,97,Non Profit Agency
+125,17,170,Non Profit Agency
+126,6,131,Non Profit Agency
+127,21,130,Non Profit Agency
+128,20,93,Commercial Agency
+129,19,57,Non Profit Agency
+130,12,86,Non Profit Agency
+131,6,34,Commercial Agency
+132,24,105,Commercial Agency
+133,4,185,Non Profit Agency
+134,21,54,Non Profit Agency
+135,19,241,Non Profit Agency
+136,8,57,Non Profit Agency
+137,18,114,Non Profit Agency
+138,19,52,Non Profit Agency
+139,17,112,Non Profit Agency
+140,24,77,Commercial Agency
+141,17,54,Commercial Agency
+142,11,107,Non Profit Agency
+143,18,105,Non Profit Agency
+144,19,65,Non Profit Agency
+145,12,177,Non Profit Agency
+146,6,156,Non Profit Agency
+147,16,177,Non Profit Agency
+148,24,76,Commercial Agency
+149,24,31,Commercial Agency
+150,20,85,Commercial Agency
+151,17,128,Non Profit Agency
+152,18,146,Non Profit Agency
+153,20,72,Non Profit Agency
+154,10,56,Non Profit Agency
+155,20,116,Non Profit Agency
+156,16,30,Non Profit Agency
+157,20,95,Non Profit Agency
+158,8,113,Non Profit Agency
+159,20,62,Commercial Agency
+160,11,16,Non Profit Agency
+161,20,64,Non Profit Agency
+162,20,82,Non Profit Agency
+163,6,57,Non Profit Agency
+164,17,49,Non Profit Agency
+165,20,40,Non Profit Agency
+166,16,161,Non Profit Agency
+167,12,65,Non Profit Agency
+168,16,56,Commercial Agency
+169,18,110,Non Profit Agency
+170,6,54,Non Profit Agency
+171,16,120,Non Profit Agency
+172,16,78,Non Profit Agency
+173,8,104,Non Profit Agency
+174,13,149,Non Profit Agency
+175,8,159,Non Profit Agency
+176,16,45,Non Profit Agency
+177,6,166,Non Profit Agency
+178,10,148,Non Profit Agency
+179,15,160,Non Profit Agency
+180,7,120,Non Profit Agency
+181,6,87,Non Profit Agency
+182,17,80,Non Profit Agency
+183,18,130,Non Profit Agency
+184,8,212,Non Profit Agency
+185,19,166,Non Profit Agency
+186,10,108,Non Profit Agency
+187,16,95,Non Profit Agency
+188,6,156,Non Profit Agency
+189,4,200,Non Profit Agency
+190,19,136,Non Profit Agency
+191,17,85,Non Profit Agency
+192,9,24,Non Profit Agency
+193,7,149,Non Profit Agency
+194,11,169,Non Profit Agency
+195,4,176,Non Profit Agency
+196,19,141,Non Profit Agency
+197,15,25,Non Profit Agency
+198,11,99,Non Profit Agency
+199,8,138,Non Profit Agency
+200,18,113,Non Profit Agency
+201,10,76,Non Profit Agency
+202,15,71,Non Profit Agency
+203,11,117,Non Profit Agency
+204,7,95,Non Profit Agency
+205,13,140,Non Profit Agency
+206,12,16,Non Profit Agency
+207,7,39,Non Profit Agency
+208,14,73,Non Profit Agency
+209,16,55,Non Profit Agency
+210,11,111,Non Profit Agency
+211,17,107,Non Profit Agency
+212,10,136,Non Profit Agency
+213,16,128,Non Profit Agency
+214,11,82,Non Profit Agency
+215,7,146,Non Profit Agency
+216,14,242,Non Profit Agency
+217,11,131,Non Profit Agency
+218,6,181,Non Profit Agency
+219,8,49,Non Profit Agency
+220,17,50,Commercial Agency
+221,17,144,Non Profit Agency
+222,6,41,Non Profit Agency
+223,16,36,Non Profit Agency
+224,4,54,Non Profit Agency
+225,11,134,Non Profit Agency
+226,7,145,Commercial Agency
+227,7,119,Commercial Agency
+228,13,104,Non Profit Agency
+229,19,25,Non Profit Agency
+230,14,125,Non Profit Agency
+231,14,49,Non Profit Agency
+232,14,59,Non Profit Agency
+233,9,85,Non Profit Agency
+234,19,116,Non Profit Agency
+235,14,165,Non Profit Agency
+236,14,164,Non Profit Agency
+237,16,229,Commercial Agency
+238,16,130,Commercial Agency
+239,12,152,Non Profit Agency
+240,10,49,Non Profit Agency
+241,13,169,Non Profit Agency
+242,4,162,Non Profit Agency
+243,9,106,Commercial Agency
+244,4,180,Non Profit Agency
+245,13,47,Non Profit Agency
+246,8,59,Non Profit Agency
+247,9,75,Commercial Agency
+248,10,49,Non Profit Agency
+249,12,65,Non Profit Agency
+250,6,64,Public (City Operated) Agency
+251,9,54,Public (City Operated) Agency
+252,10,36,Public (City Operated) Agency
+253,23,54,Public (City Operated) Agency
+254,17,32,Public (City Operated) Agency
+255,1,42,Public (City Operated) Agency
+256,14,49,Public (City Operated) Agency
+257,1,36,Public (City Operated) Agency
+258,21,26,Public (City Operated) Agency
+259,7,57,Public (City Operated) Agency
+260,7,36,Public (City Operated) Agency
+261,20,36,Public (City Operated) Agency
+262,3,62,Public (City Operated) Agency
+263,24,36,Public (City Operated) Agency
+264,5,68,Public (City Operated) Agency
+265,20,36,Public (City Operated) Agency
+266,24,49,Public (City Operated) Agency
+267,5,36,Public (City Operated) Agency
+268,1,36,Public (City Operated) Agency
+269,16,52,Public (City Operated) Agency
+270,13,36,Public (City Operated) Agency
+271,19,16,Public (City Operated) Agency
+272,19,46,Public (City Operated) Agency
+273,7,82,Non Profit Agency
+274,6,54,Non Profit Agency
+275,9,36,Public (City Operated) Agency
+276,19,26,Public (City Operated) Agency
+277,11,96,Public (City Operated) Agency
+278,14,64,Public (City Operated) Agency
+279,13,158,Non Profit Agency
+280,13,65,Non Profit Agency
+281,17,78,Non Profit Agency
+282,9,85,Non Profit Agency
+283,13,144,Non Profit Agency
+284,3,99,Non Profit Agency
+285,3,47,Non Profit Agency
+286,7,90,Non Profit Agency
+287,18,72,Non Profit Agency
+288,24,149,Commercial Agency
+289,22,90,Non Profit Agency
+290,22,80,Non Profit Agency
+291,21,90,Non Profit Agency
+292,22,88,Non Profit Agency
+293,4,80,Non Profit Agency
+294,2,43,Non Profit Agency
+295,2,112,Non Profit Agency
+296,7,56,Non Profit Agency
+297,22,80,Non Profit Agency
+298,22,43,Non Profit Agency
+299,21,56,Non Profit Agency
+300,19,30,Non Profit Agency
+301,25,71,Non Profit Agency
+302,14,251,Non Profit Agency
+303,14,131,Non Profit Agency
+304,14,161,Non Profit Agency
+305,1,30,Non Profit Agency
+306,4,215,Non Profit Agency
+307,17,45,Non Profit Agency
+308,17,86,Non Profit Agency
+309,21,56,Non Profit Agency
+310,21,30,Non Profit Agency
+311,23,43,Non Profit Agency
+312,19,118,Non Profit Agency
+313,6,29,Non Profit Agency
+314,21,90,Non Profit Agency
+315,16,106,Non Profit Agency
+316,25,82,Non Profit Agency
+317,5,47,Commercial Agency
+318,2,86,Non Profit Agency
+319,3,62,Public (City Operated) Agency
+320,25,107,Non Profit Agency
+321,16,30,Non Profit Agency
+322,10,62,Public (City Operated) Agency
+323,11,126,Non Profit Agency
+324,13,52,Non Profit Agency
+325,6,42,Commercial Agency
+326,2,49,Non Profit Agency
+327,8,259,Non Profit Agency
+328,12,162,Non Profit Agency
+329,8,242,Non Profit Agency
+330,12,185,Non Profit Agency
+331,22,20,Non Profit Agency
+332,14,62,Non Profit Agency
+333,1,72,Non Profit Agency
+334,20,52,Non Profit Agency
+335,4,155,Non Profit Agency
+336,25,82,Non Profit Agency
+337,8,78,Non Profit Agency
+338,13,52,Non Profit Agency
+339,7,31,Commercial Agency
+340,24,72,Non Profit Agency
+341,2,103,Commercial Agency
+342,4,228,Non Profit Agency
+343,4,44,Non Profit Agency
+344,3,159,Non Profit Agency
+345,2,48,Commercial Agency
+346,12,92,Non Profit Agency
+347,9,49,Non Profit Agency
+348,3,159,Non Profit Agency
+349,17,46,Non Profit Agency
+350,10,24,Non Profit Agency
+351,22,49,Non Profit Agency
+352,25,82,Non Profit Agency
+353,25,62,Non Profit Agency
+354,11,167,Non Profit Agency
+355,18,191,Non Profit Agency
+356,12,261,Non Profit Agency
+357,15,63,Non Profit Agency
+358,14,112,Non Profit Agency
+359,5,41,Non Profit Agency
+360,15,102,Non Profit Agency
+361,15,148,Non Profit Agency
+362,23,131,Non Profit Agency
+363,5,72,Non Profit Agency
+364,10,71,Non Profit Agency
+365,10,39,Non Profit Agency
+366,17,86,Non Profit Agency
+367,15,202,Non Profit Agency
+368,2,90,Non Profit Agency
+369,18,84,Non Profit Agency
+370,9,39,Non Profit Agency
+371,15,222,Non Profit Agency
+372,20,153,Non Profit Agency
+373,10,57,Non Profit Agency
+374,21,123,Non Profit Agency
+375,23,90,Non Profit Agency
+376,6,63,Non Profit Agency
+377,14,49,Non Profit Agency
+378,15,90,Non Profit Agency
+379,25,62,Public (City Operated) Agency
+380,10,59,Non Profit Agency
+381,1,41,Non Profit Agency
+382,1,223,Non Profit Agency
+383,14,57,Non Profit Agency
+384,5,121,Non Profit Agency
+385,17,78,Commercial Agency
+386,17,143,Non Profit Agency
+387,15,402,Non Profit Agency
+388,10,40,Non Profit Agency
+389,19,63,Commercial Agency
+390,2,45,Commercial Agency
+391,10,49,Non Profit Agency
+392,21,52,Commercial Agency
+393,24,149,Non Profit Agency
+394,2,100,Non Profit Agency
+395,21,16,Public (City Operated) Agency
+396,16,59,Commercial Agency
+397,20,71,Commercial Agency
+398,19,52,Commercial Agency
+399,6,151,Non Profit Agency
+400,10,30,Non Profit Agency
+401,9,143,Non Profit Agency
+402,11,54,Non Profit Agency
+403,12,49,Non Profit Agency
+404,12,42,Non Profit Agency
+405,15,39,Commercial Agency
+406,17,90,Commercial Agency
+407,15,71,Non Profit Agency
+408,6,49,Non Profit Agency
+409,14,166,Non Profit Agency
+410,15,110,Non Profit Agency
+411,4,14,Non Profit Agency
+412,2,114,Non Profit Agency
+413,2,30,Non Profit Agency
+414,2,58,Non Profit Agency
+415,2,86,Non Profit Agency
+416,2,47,Commercial Agency
+417,2,135,Non Profit Agency
+418,2,56,Commercial Agency
+419,3,31,Commercial Agency
+420,3,16,Non Profit Agency
+421,3,32,Commercial Agency
+422,3,33,Non Profit Agency
+423,2,86,Non Profit Agency
+424,3,169,Non Profit Agency
+425,2,31,Non Profit Agency
+426,2,58,Non Profit Agency
+427,2,24,Non Profit Agency
+428,3,51,Non Profit Agency
+429,3,144,Non Profit Agency
+430,3,47,Non Profit Agency
+431,2,86,Non Profit Agency
+432,2,40,Non Profit Agency
+433,16,87,Non Profit Agency
+434,16,31,Commercial Agency
+435,18,40,Non Profit Agency
+436,7,25,Non Profit Agency
+437,8,110,Non Profit Agency
+438,6,60,Non Profit Agency
+439,8,65,Non Profit Agency
+440,17,80,Non Profit Agency
+441,15,52,Non Profit Agency
+442,23,24,Commercial Agency
+443,22,49,Non Profit Agency
+444,22,55,Non Profit Agency
+445,25,121,Non Profit Agency
+446,20,110,Non Profit Agency
+447,24,110,Non Profit Agency
+448,24,27,Non Profit Agency
+449,21,16,Non Profit Agency
+450,21,60,Non Profit Agency
+451,23,118,Non Profit Agency
+452,25,91,Non Profit Agency
+453,23,80,Non Profit Agency
+454,22,47,Non Profit Agency
+455,22,65,Non Profit Agency
+456,25,59,Non Profit Agency
+457,20,54,Non Profit Agency
+458,24,80,Non Profit Agency
+459,8,46,Non Profit Agency
+460,11,61,Non Profit Agency
+461,14,16,Non Profit Agency
+462,19,118,Non Profit Agency
+463,8,25,Commercial Agency
+464,8,32,Commercial Agency
+465,4,16,Non Profit Agency
+466,19,20,Non Profit Agency
+467,11,189,Non Profit Agency
+468,4,16,Non Profit Agency
+469,19,24,Non Profit Agency
+470,9,16,Non Profit Agency
+471,8,114,Commercial Agency
+472,19,94,Commercial Agency
+473,15,75,Commercial Agency
+474,12,24,Non Profit Agency
+475,12,16,Non Profit Agency
+476,12,48,Commercial Agency
+477,7,101,Non Profit Agency
+478,4,22,Non Profit Agency
+479,12,16,Non Profit Agency
+480,2,56,Non Profit Agency
+481,19,41,Non Profit Agency
+482,11,69,Non Profit Agency
+483,8,55,Commercial Agency
+484,4,39,Commercial Agency
+485,14,66,Non Profit Agency
+486,15,176,Non Profit Agency
+487,4,16,Non Profit Agency
+488,2,48,Non Profit Agency
+489,12,88,Non Profit Agency
+490,4,14,Non Profit Agency
+491,12,56,Non Profit Agency
+492,11,16,Non Profit Agency
+493,23,43,Non Profit Agency
+494,15,24,Non Profit Agency
+495,10,16,Non Profit Agency
+496,11,31,Non Profit Agency
+497,16,43,Non Profit Agency
+498,16,70,Commercial Agency
+499,3,127,Commercial Agency
+500,19,89,Non Profit Agency
+501,2,24,Commercial Agency
+502,16,67,Commercial Agency
+503,12,32,Non Profit Agency
+504,3,60,Commercial Agency
+505,3,180,Commercial Agency
+506,16,69,Commercial Agency
+507,4,43,Non Profit Agency
+508,25,82,Commercial Agency
+509,9,153,Non Profit Agency
+510,4,86,Non Profit Agency
+511,5,28,Non Profit Agency
+512,11,133,Non Profit Agency
+513,21,49,Non Profit Agency
+514,12,60,Non Profit Agency
+515,9,140,Non Profit Agency
+516,2,43,Non Profit Agency
+517,24,52,Commercial Agency
+518,14,63,Commercial Agency
+519,16,58,Non Profit Agency
+520,24,142,Non Profit Agency
+521,4,49,Non Profit Agency
+522,6,56,Non Profit Agency
+523,6,46,Commercial Agency
+524,18,71,Non Profit Agency
+525,20,31,Commercial Agency
+526,6,75,Non Profit Agency
+527,24,55,Commercial Agency
+528,20,16,Non Profit Agency
+529,4,51,Commercial Agency
+530,13,30,Non Profit Agency
+531,19,26,Commercial Agency
+532,17,91,Non Profit Agency
+533,3,71,Non Profit Agency
+534,3,30,Non Profit Agency
+535,3,56,Commercial Agency
+536,20,54,Non Profit Agency
+537,17,24,Commercial Agency
+538,7,47,Commercial Agency
+539,6,98,Commercial Agency
+540,19,69,Non Profit Agency
+541,4,101,Non Profit Agency
+542,23,103,Non Profit Agency
+543,18,24,Commercial Agency
+544,8,60,Commercial Agency
+545,6,30,Non Profit Agency
+546,4,50,Non Profit Agency
+547,19,30,Non Profit Agency
+548,8,70,Non Profit Agency
+549,3,16,Non Profit Agency
+550,3,198,Non Profit Agency
+551,17,119,Non Profit Agency
+552,14,151,Non Profit Agency
+553,3,63,Commercial Agency
+554,10,72,Public (City Operated) Agency
+555,12,49,Commercial Agency
+556,4,87,Commercial Agency
+557,3,78,Commercial Agency
+558,9,39,Non Profit Agency
+559,14,23,Non Profit Agency
+560,8,38,Commercial Agency
+561,3,119,Non Profit Agency
+562,11,96,Non Profit Agency
+563,11,26,Non Profit Agency
+564,14,62,Non Profit Agency
+565,13,65,Non Profit Agency
+566,14,72,Non Profit Agency
+567,16,235,Commercial Agency
+568,11,85,Commercial Agency
+569,10,62,Commercial Agency
+570,14,33,Commercial Agency
+571,10,115,Commercial Agency
+572,16,32,Commercial Agency
+573,14,59,Non Profit Agency
+574,3,30,Non Profit Agency
+575,5,34,Commercial Agency
+576,19,37,Commercial Agency
+577,22,63,Non Profit Agency
+578,16,50,Non Profit Agency
+579,4,62,Non Profit Agency
+580,2,24,Commercial Agency
+581,14,39,Non Profit Agency
+582,12,92,Commercial Agency
+583,3,43,Non Profit Agency
+584,20,34,Commercial Agency
+585,2,101,Non Profit Agency
+586,13,62,Non Profit Agency
+587,22,62,Non Profit Agency
+588,20,100,Commercial Agency
+589,15,41,Commercial Agency
+590,21,36,Commercial Agency
+591,18,65,Commercial Agency
+592,14,16,Commercial Agency
+593,2,67,Non Profit Agency
+594,19,128,Non Profit Agency
+595,25,51,Commercial Agency
+596,18,62,Commercial Agency
+597,22,69,Non Profit Agency
+598,9,123,Non Profit Agency
+599,9,131,Non Profit Agency
+600,14,66,Commercial Agency
+601,5,30,Non Profit Agency
+602,2,28,Non Profit Agency
+603,13,56,Non Profit Agency
+604,5,35,Commercial Agency
+605,23,69,Non Profit Agency
+606,1,62,Non Profit Agency
+607,23,95,Non Profit Agency
+608,22,88,Public (City Operated) Agency
+609,22,72,Non Profit Agency
+610,7,24,Public (City Operated) Agency
+611,5,112,Non Profit Agency
+612,16,163,Non Profit Agency
+613,14,85,Non Profit Agency
+614,9,103,Non Profit Agency
+615,22,100,Non Profit Agency
+616,22,41,Non Profit Agency
+617,1,64,Non Profit Agency
+618,20,62,Non Profit Agency
+619,7,82,Non Profit Agency
+620,6,97,Non Profit Agency
+621,14,51,Non Profit Agency
+622,3,90,Non Profit Agency
+623,24,143,Non Profit Agency
+624,18,59,Non Profit Agency
+625,13,52,Non Profit Agency
+626,7,66,Non Profit Agency
+627,24,125,Non Profit Agency
+628,23,39,Non Profit Agency
+629,18,63,Commercial Agency
+630,19,62,Non Profit Agency
+631,20,26,Non Profit Agency
+632,10,64,Non Profit Agency
+633,23,31,Non Profit Agency
+634,1,56,Non Profit Agency
+635,10,50,Commercial Agency
+636,15,52,Non Profit Agency
+637,23,49,Non Profit Agency
+638,13,106,Non Profit Agency
+639,22,69,Non Profit Agency
+640,10,85,Commercial Agency
+641,17,64,Commercial Agency
+642,17,98,Commercial Agency
+643,7,35,Non Profit Agency
+644,4,64,Commercial Agency
+645,6,18,Commercial Agency
+646,11,56,Non Profit Agency
+647,19,142,Non Profit Agency
+648,4,67,Non Profit Agency
+649,15,62,Commercial Agency
+650,12,25,Commercial Agency
+651,10,52,Non Profit Agency
+652,23,60,Commercial Agency
+653,12,132,Non Profit Agency
+654,3,74,Commercial Agency
+655,8,48,Commercial Agency
+656,23,100,Non Profit Agency
+657,4,57,Non Profit Agency
+658,10,65,Non Profit Agency
+659,3,71,Non Profit Agency
+660,16,92,Commercial Agency
+661,16,16,Commercial Agency
+662,17,95,Non Profit Agency
+663,19,34,Commercial Agency
+664,22,45,Commercial Agency
+665,14,48,Commercial Agency
+666,15,81,Non Profit Agency
+667,10,49,Non Profit Agency
+668,3,53,Non Profit Agency
+669,3,109,Commercial Agency
+670,4,35,Commercial Agency
+671,24,56,Non Profit Agency
+672,4,70,Commercial Agency
+673,15,101,Non Profit Agency
+674,14,248,Non Profit Agency
+675,15,36,Commercial Agency
+676,12,22,Non Profit Agency
+677,5,74,Non Profit Agency
+678,25,57,Commercial Agency
+679,9,39,Non Profit Agency
+680,1,76,Non Profit Agency
+681,4,58,Non Profit Agency
+682,15,55,Non Profit Agency
+683,19,84,Non Profit Agency
+684,11,73,Commercial Agency
+685,19,47,Non Profit Agency
+686,15,61,Commercial Agency
+687,16,58,Commercial Agency
+688,8,36,Commercial Agency
+689,4,130,Commercial Agency
+690,23,42,Non Profit Agency
+691,15,32,Commercial Agency
+692,4,95,Non Profit Agency
+693,2,93,Commercial Agency
+694,4,59,Commercial Agency
+695,3,31,Commercial Agency
+696,6,242,Non Profit Agency
+697,13,62,Public (City Operated) Agency
+698,20,46,Commercial Agency
+699,4,52,Commercial Agency
+700,10,97,Commercial Agency
+701,2,28,Non Profit Agency
+702,2,86,Commercial Agency
+703,19,151,Non Profit Agency
+704,1,34,Non Profit Agency
+705,10,65,Non Profit Agency
+706,1,13,Non Profit Agency
+707,19,57,Commercial Agency
+708,11,58,Commercial Agency
+709,22,46,Non Profit Agency
+710,12,49,Commercial Agency
+711,25,85,Commercial Agency
+712,12,150,Commercial Agency
+713,15,98,Commercial Agency
+714,22,42,Commercial Agency
+715,4,92,Commercial Agency
+716,20,55,Commercial Agency
+717,4,73,Commercial Agency
+718,4,16,Commercial Agency
+719,11,56,Commercial Agency
+720,18,144,Non Profit Agency
+721,14,82,Commercial Agency
+722,21,56,Non Profit Agency
+723,9,129,Non Profit Agency
+724,14,86,Non Profit Agency
+725,4,25,Non Profit Agency
+726,18,35,Commercial Agency
+727,9,181,Non Profit Agency
+728,8,63,Commercial Agency
+729,22,37,Commercial Agency
+730,13,179,Non Profit Agency
+731,16,57,Non Profit Agency
+732,14,49,Commercial Agency
+733,10,62,Commercial Agency
+734,10,96,Non Profit Agency
+735,2,30,Non Profit Agency
+736,9,70,Commercial Agency
+737,20,54,Public (City Operated) Agency
+738,3,90,Commercial Agency
+739,4,36,Commercial Agency
+740,7,56,Non Profit Agency
+741,3,56,Non Profit Agency
+742,17,71,Non Profit Agency
+743,24,56,Non Profit Agency
+744,20,56,Non Profit Agency
+745,23,71,Non Profit Agency
+746,15,148,Non Profit Agency
+747,2,129,Non Profit Agency
+748,2,131,Non Profit Agency
+749,19,39,Non Profit Agency
+750,22,49,Commercial Agency
+751,8,96,Non Profit Agency
+752,1,82,Non Profit Agency
+753,5,86,Non Profit Agency
+754,19,111,Commercial Agency
+755,14,39,Commercial Agency
+756,4,33,Commercial Agency
+757,3,59,Commercial Agency
+758,17,89,Commercial Agency
+759,7,36,Public (City Operated) Agency
+760,19,54,Commercial Agency
+761,9,105,Non Profit Agency
+762,2,59,Non Profit Agency
+763,9,164,Non Profit Agency
+764,9,153,Non Profit Agency
+765,5,80,Non Profit Agency
+766,18,56,Non Profit Agency
+767,4,114,Non Profit Agency
+768,17,99,Non Profit Agency
+769,20,58,Non Profit Agency
+770,1,43,Non Profit Agency
+771,3,28,Non Profit Agency
+772,25,39,Non Profit Agency
+773,4,149,Non Profit Agency
+774,7,71,Non Profit Agency
+775,7,56,Non Profit Agency
+776,19,172,Non Profit Agency
+777,24,56,Non Profit Agency
+778,14,128,Non Profit Agency
+779,5,105,Non Profit Agency
+780,16,151,Non Profit Agency
+781,25,24,Commercial Agency
+782,14,31,Commercial Agency
+783,3,112,Commercial Agency
+784,11,57,Non Profit Agency
+785,4,24,Commercial Agency
+786,4,16,Commercial Agency
+787,15,107,Commercial Agency
+788,14,43,Commercial Agency
+789,14,117,Commercial Agency
+790,15,77,Commercial Agency
+791,15,11,Commercial Agency
+792,2,161,Commercial Agency
+793,17,80,Non Profit Agency
+794,15,29,Commercial Agency
+795,16,41,Commercial Agency
+796,13,64,Commercial Agency
+797,20,56,Non Profit Agency
+798,22,43,Non Profit Agency
+799,22,56,Non Profit Agency
+800,20,56,Non Profit Agency
+801,25,43,Non Profit Agency
+802,23,56,Non Profit Agency
+803,22,28,Non Profit Agency
+804,22,28,Non Profit Agency
+805,15,43,Non Profit Agency
+806,11,39,Non Profit Agency
+807,12,80,Commercial Agency
+808,3,74,Commercial Agency
+809,8,142,Non Profit Agency
+810,12,119,Non Profit Agency
+811,24,32,Commercial Agency
+812,14,55,Commercial Agency
+813,11,20,Non Profit Agency
+814,12,45,Non Profit Agency
+815,5,97,Non Profit Agency
+816,11,84,Commercial Agency
+817,12,27,Non Profit Agency
+818,4,112,Commercial Agency
+819,16,78,Non Profit Agency
+820,3,76,Commercial Agency
+821,8,102,Commercial Agency
+822,8,109,Commercial Agency
+823,15,50,Non Profit Agency
+824,15,30,Non Profit Agency
+825,16,47,Commercial Agency
+826,8,79,Non Profit Agency
+827,18,93,Non Profit Agency
+828,8,97,Non Profit Agency
+829,15,73,Commercial Agency
+830,17,74,Non Profit Agency
+831,8,120,Non Profit Agency
+832,17,46,Commercial Agency
+833,8,76,Non Profit Agency
+834,16,24,Non Profit Agency
+835,17,68,Commercial Agency
+836,16,13,Non Profit Agency
+837,14,49,Commercial Agency
+838,6,26,Non Profit Agency
+839,13,35,Commercial Agency
+840,21,93,Commercial Agency
+841,23,56,Non Profit Agency
+842,21,43,Non Profit Agency
+843,13,41,Non Profit Agency
+844,21,36,Non Profit Agency
+845,20,86,Non Profit Agency
+846,19,47,Commercial Agency
+847,25,105,Non Profit Agency
+848,21,56,Non Profit Agency
+849,6,43,Non Profit Agency
+850,9,36,Non Profit Agency
+851,3,26,Commercial Agency
+852,3,32,Commercial Agency
+853,9,85,Commercial Agency
+854,18,74,Commercial Agency
+855,5,62,Non Profit Agency
+856,8,62,Non Profit Agency
+857,16,14,Non Profit Agency
+858,15,57,Commercial Agency
+859,14,146,Commercial Agency
+860,12,48,Non Profit Agency
+861,19,26,Commercial Agency
+862,22,8,Commercial Agency
+863,19,71,Commercial Agency
+864,10,37,Commercial Agency
+865,8,88,Commercial Agency
+866,25,26,Non Profit Agency
+867,25,26,Non Profit Agency
+868,25,26,Non Profit Agency
+869,1,56,Non Profit Agency
+870,20,56,Non Profit Agency
+871,3,71,Non Profit Agency
+872,3,56,Non Profit Agency
+873,1,43,Non Profit Agency
+874,6,28,Non Profit Agency
+875,15,28,Non Profit Agency
+876,17,30,Non Profit Agency
+877,8,58,Non Profit Agency
+878,21,30,Non Profit Agency
+879,20,56,Non Profit Agency
+880,20,86,Non Profit Agency
+881,9,71,Non Profit Agency
+882,9,15,Non Profit Agency
+883,22,43,Non Profit Agency
+884,3,40,Non Profit Agency
+885,3,28,Non Profit Agency
+886,21,30,Non Profit Agency
+887,22,43,Non Profit Agency
+888,18,102,Commercial Agency
+889,19,54,Commercial Agency
+890,14,63,Commercial Agency
+891,12,25,Commercial Agency
+892,20,30,Commercial Agency
+893,3,95,Non Profit Agency
+894,14,31,Commercial Agency
+895,9,46,Commercial Agency
+896,19,33,Commercial Agency
+897,20,26,Commercial Agency
+898,3,114,Non Profit Agency
+899,18,64,Commercial Agency
+900,22,59,Commercial Agency
+901,8,140,Commercial Agency
+902,19,206,Commercial Agency
+903,22,28,Non Profit Agency
+904,24,56,Non Profit Agency
+905,25,105,Non Profit Agency
+906,21,71,Non Profit Agency
+907,16,43,Non Profit Agency
+908,17,43,Non Profit Agency
+909,21,15,Non Profit Agency
+910,11,30,Non Profit Agency
+911,9,28,Non Profit Agency
+912,18,72,Non Profit Agency
+913,2,78,Commercial Agency
+914,4,120,Commercial Agency
+915,15,51,Commercial Agency
+916,20,28,Commercial Agency
+917,11,50,Commercial Agency
+918,8,47,Commercial Agency
+919,6,49,Non Profit Agency
+920,1,66,Non Profit Agency
+921,1,49,Non Profit Agency
+922,7,105,Non Profit Agency
+923,24,52,Non Profit Agency
+924,15,16,Commercial Agency
+925,21,49,Non Profit Agency
+926,5,148,Non Profit Agency
+927,3,110,Commercial Agency
+928,14,88,Commercial Agency
+929,21,50,Commercial Agency
+930,8,24,Commercial Agency
+931,16,30,Commercial Agency
+932,18,62,Non Profit Agency
+933,5,82,Commercial Agency
+934,10,52,Non Profit Agency
+935,10,280,Non Profit Agency
+936,13,142,Non Profit Agency
+937,12,16,Non Profit Agency
+938,10,74,Commercial Agency
+939,11,88,Non Profit Agency
+940,10,37,Commercial Agency
+941,10,107,Commercial Agency
+942,3,43,Non Profit Agency
+943,8,43,Non Profit Agency
+944,7,43,Non Profit Agency
+945,8,71,Non Profit Agency
+946,7,82,Non Profit Agency
+947,23,58,Commercial Agency
+948,18,72,Non Profit Agency
+949,12,41,Commercial Agency
+950,13,48,Commercial Agency
+951,8,72,Commercial Agency
+952,23,24,Commercial Agency
+953,12,52,Non Profit Agency
+954,4,76,Commercial Agency
+955,23,58,Commercial Agency
+956,21,26,Commercial Agency
+957,19,28,Commercial Agency
+958,17,58,Commercial Agency
+959,15,49,Non Profit Agency
+960,17,8,Commercial Agency
+961,22,62,Non Profit Agency
+962,15,25,Commercial Agency
+963,13,86,Commercial Agency
+964,15,17,Commercial Agency
+965,19,20,Commercial Agency
+966,19,67,Non Profit Agency
+967,11,24,Non Profit Agency
+968,2,41,Commercial Agency
+969,12,88,Non Profit Agency
+970,3,119,Commercial Agency
+971,6,71,Non Profit Agency
+972,8,49,Non Profit Agency
+973,3,132,Commercial Agency
+974,17,56,Non Profit Agency
+975,9,31,Commercial Agency
+976,25,105,Non Profit Agency
+977,12,39,Commercial Agency
+978,20,28,Commercial Agency
+979,12,23,Commercial Agency
+980,10,15,Commercial Agency
+981,19,54,Commercial Agency
+982,5,88,Commercial Agency
+983,4,56,Non Profit Agency
+984,6,56,Non Profit Agency
+985,8,32,Non Profit Agency
+986,11,101,Non Profit Agency
+987,19,31,Commercial Agency
+988,4,134,Commercial Agency
+989,9,143,Commercial Agency
+990,21,53,Commercial Agency
+991,16,55,Non Profit Agency
+992,6,79,Commercial Agency
+993,8,94,Commercial Agency
+994,23,85,Non Profit Agency
+995,24,54,Public (City Operated) Agency
+996,20,40,Commercial Agency
+997,14,15,Commercial Agency
+998,19,56,Commercial Agency
+999,19,48,Commercial Agency
+1000,14,33,Commercial Agency
+1001,9,28,Commercial Agency
+1002,8,83,Commercial Agency
+1003,16,73,Commercial Agency
+1004,16,88,Commercial Agency
+1005,8,16,Non Profit Agency
+1006,6,41,Non Profit Agency
+1007,4,44,Commercial Agency
+1008,9,35,Commercial Agency
+1009,10,36,Non Profit Agency
+1010,10,152,Non Profit Agency
+1011,22,20,Commercial Agency
+1012,23,47,Commercial Agency
+1013,11,161,Non Profit Agency
+1014,15,26,Commercial Agency
+1015,1,34,Commercial Agency
+1016,16,15,Non Profit Agency
+1017,6,96,Non Profit Agency
+1018,18,94,Non Profit Agency
+1019,11,34,Non Profit Agency
+1020,4,103,Commercial Agency
+1021,4,142,Commercial Agency
+1022,9,28,Non Profit Agency
+1023,25,41,Non Profit Agency
+1024,6,65,Non Profit Agency
+1025,19,29,Commercial Agency
+1026,18,141,Commercial Agency
+1027,14,38,Commercial Agency
+1028,18,20,Non Profit Agency
+1029,7,62,Non Profit Agency
+1030,3,15,Commercial Agency
+1031,22,18,Commercial Agency
+1032,13,79,Commercial Agency
+1033,4,15,Commercial Agency
+1034,7,51,Non Profit Agency
+1035,19,65,Commercial Agency
+1036,3,79,Commercial Agency
+1037,5,16,Non Profit Agency
+1038,2,6,Commercial Agency
+1039,10,62,Non Profit Agency
+1040,6,49,Non Profit Agency
+1041,8,55,Non Profit Agency
+1042,24,41,Non Profit Agency
+1043,17,28,Non Profit Agency
+1044,25,30,Non Profit Agency
+1045,5,56,Non Profit Agency
+1046,5,56,Non Profit Agency
+1047,20,41,Non Profit Agency
+1048,20,56,Non Profit Agency
+1049,17,10,Commercial Agency
+1050,2,56,Non Profit Agency
+1051,5,56,Non Profit Agency
+1052,17,64,Non Profit Agency
+1053,9,39,Non Profit Agency
+1054,23,28,Non Profit Agency
+1055,25,34,Non Profit Agency
+1056,18,25,Commercial Agency
+1057,8,15,Non Profit Agency
+1058,7,104,Commercial Agency
+1059,10,49,Non Profit Agency
+1060,6,112,Non Profit Agency
+1061,15,60,Non Profit Agency
+1062,13,49,Non Profit Agency
+1063,8,56,Non Profit Agency
