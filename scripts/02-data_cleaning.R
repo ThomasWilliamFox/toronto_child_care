@@ -112,9 +112,8 @@ cleaned_census_data <-
   ) 
 
 
-# Add total child care spots count to census data
+# Add total child care spots count and total child population to census data
 merged_census_childcare <- cbind(cleaned_census_data, summarized_child_care_data["total_spots"])
-
 merged_census_childcare <- cbind(merged_census_childcare, total_under_15 = rowSums(merged_census_childcare[2:4]))
 
 #### Save data ####

@@ -27,8 +27,7 @@ library(here)
 
 You can and should cross-reference sections and sub-sections. 
 
-The remainder of this paper is structured as follows. @sec-data....
-
+The remainder of this paper is structured as follows(@citeR). @sec-data....
 
 
 # Data {#sec-data}
@@ -43,8 +42,8 @@ Some of our data is of penguins (@fig-totalspots), from @palmerpenguins.
 #| warning: false
 
 # read cleaned child care data
-child_care = read_csv(
-  file = here("outputs/data/child_care_data.csv"),
+ census_childcare_data = read_csv(
+  file = here("outputs/data/merged_ward_data.csv"),
   show_col_types = FALSE
 )
 
@@ -58,21 +57,24 @@ ward_names = read_csv(
 ward_name_list <- as.list(ward_names$ward_name)
 
 # substitute ward numbers for names
-child_care_graph_1 <-
-  child_care |>
+census_childcare_data <-
+  census_childcare_data |>
   mutate(ward = as.character(ward))
 
 for (x in 1:25) {
-  child_care_graph_1$ward[child_care_graph_1$ward == x] = ward_name_list[[x]]
+  census_childcare_data$ward[census_childcare_data$ward == x] = ward_name_list[[x]]
 } 
 
 # construct graph 
-child_care_graph_1 |>
-  ggplot(aes(x = ward, y = totspace)) +
+child_care_graph_1 <-
+  census_childcare_data|>
+  ggplot(aes(x = reorder(ward, 1:25), y = total_spots)) +
   geom_bar(stat = "identity") +
   theme_minimal() +
   theme(axis.text.x = element_text(size = 7, angle = 45, vjust = 1, hjust=1))+
-  labs(x = "Ward", y = "Total child care spaces")
+  labs(x = "Ward arranged by ward number", y = "Total child care spaces")
+
+child_care_graph_1
 ```
 
 Some of our data is of money (@fig-totalchildren), from @palmerpenguins.
@@ -83,28 +85,28 @@ Some of our data is of money (@fig-totalchildren), from @palmerpenguins.
 #| echo: false
 #| warning: false
 
-# read cleaned child care data
+# read cleaned census data
 census_data = read_csv(
   file = here("outputs/data/census_data.csv"),
   show_col_types = FALSE
 )
 
-census_graph_population <-
-  census_data[c(2:26),c(1:7)] |>
-  select(ward, pop_0_to_4, pop_5_to_9, pop_10_to_14)
-
 # substitute ward numbers for names
+
 for (x in 1:25) {
-  census_graph_population$ward[census_graph_population$ward == x] = ward_name_list[[x]]
+  census_data$ward[census_data$ward == x] = ward_name_list[[x]]
 } 
 
 # construct graph 
-census_graph_population |>
-  ggplot(aes(x = ward, y = pop_0_to_4 + pop_5_to_9 + pop_10_to_14)) +
+census_graph_population<-
+  census_data|>
+  ggplot(aes(x = reorder(ward, 1:25), y = pop_0_to_4 + pop_5_to_9 + pop_10_to_14)) +
   geom_bar(stat = "identity") +
   theme_minimal() +
   theme(axis.text.x = element_text(size = 7, angle = 45, vjust = 1, hjust=1))+
-  labs(x = "Ward", y = "Population under 15 years old") 
+  labs(x = "Ward arranged by ward number", y = "Population under 15 years old") 
+
+census_graph_population
 ```
 
 Some of our data is of money (@fig-avgincome), from @palmerpenguins.
@@ -115,38 +117,57 @@ Some of our data is of money (@fig-avgincome), from @palmerpenguins.
 #| echo: false
 #| warning: false
 
-# Isolate part of data set needed
-census_graph_income <-
-  census_data[c(2:26),c(1:7)] |>
-  select(ward, avg_hh_income, med_hh_income)
-
-# Substitute ward numbers for names
-for (x in 1:25) {
-  census_graph_income$ward[census_graph_income$ward == x] = ward_name_list[[x]]
-} 
-
 # Construct graph 
-census_graph_income |>
-  ggplot(aes(x = ward, y = avg_hh_income)) +
+census_graph_income <-
+  census_data |>
+  ggplot(aes(x = reorder(ward, avg_hh_income), y = avg_hh_income)) +
   geom_bar(stat = "identity") +
   theme_minimal() +
   theme(axis.text.x = element_text(size = 7, angle = 45, vjust = 1, hjust=1)) +
-  labs(x = "Ward", y = "Average household income")
+  labs(x = "Ward arranged by average household income", y = "Average household income")
+census_graph_income
 ```
 
 ```{r}
-#| label: fig-bills
-#| fig-cap: Bills of penguins
+#| label: fig-spacesbyincome
+#| fig-cap: Number of child care spaces by ward (arranged by average income)
 #| echo: false
+#| warning: false
 
-ggplot(penguins, aes(x = island, fill = species)) +
-  geom_bar(alpha = 0.8) +
-  scale_fill_manual(values = c("darkorange","purple","cyan4"),
-                    guide = "none") +
+spaces_by_ward <- 
+  census_childcare_data|>
+  ggplot(aes(x = reorder(ward, avg_hh_income), y = total_spots)) +
+  geom_bar(stat = "identity") +
   theme_minimal() +
-  facet_wrap(~species, ncol = 1) +
-  coord_flip()
+  theme(axis.text.x = element_text(size = 7, angle = 45, vjust = 1, hjust=1)) +
+  labs(x = "Ward arranged by average household income", y = "Child care spaces")
+
+spaces_by_ward
 ```
+
+```{r}
+#| label: fig-childrenspacesplot
+#| fig-cap: Number of children per child care space by ward
+#| echo: false
+#| warning: false
+
+census_childcare_by_income <-
+  arrange(census_childcare_data, avg_hh_income)
+
+
+children_per_space_by_income <- 
+  census_childcare_by_income |>
+# Change the point size, and shape
+  ggplot(aes(x=reorder(ward, avg_hh_income), y= total_under_15/total_spots)) +
+  geom_point(fill= "black", size=1, shape=23) +
+  geom_smooth(mapping = aes(x=1:25, y = total_under_15/total_spots), method=lm, se=FALSE) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(size = 7, angle = 45, vjust = 1, hjust=1)) +
+  labs(x = "Ward arranged by average household income ", y = "Children per child care space") 
+
+suppressMessages(print(children_per_space_by_income))
+```
+
 
 Talk more about it.
 
