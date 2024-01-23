@@ -20,10 +20,12 @@ bibliography: references.bib
 #| echo: false
 
 library(tidyverse)
-library(palmerpenguins)
 library(here)
 library(knitr)
 library(tinytex)
+library(opendatatoronto)
+library(dplyr)
+library(janitor)
 ```
 
 ```{r}
@@ -60,12 +62,21 @@ ward_names = read_csv(
 
 You can and should cross-reference sections and sub-sections. 
 
-The remainder of this paper is structured as follows(@citeR). @sec-data....
+The remainder of this paper is structured as follows(@citeR). 
+
+[@citeR]
+[@tidyverse] 
+[@here]
+[@knitr]
+[@tinytex]
+[@opendatatoronto]
+[@dplyr]
+[@janitor]
 
 
 # Data {#sec-data}
 
-Some of our data is of penguins (@fig-totalspots), from @palmerpenguins.
+Some of our data is of penguins (@fig-totalspots), from @opendatatoronto.
 
 
 ```{r}
@@ -149,7 +160,7 @@ child_care_graph_1
 ```
 
 
-Some of our data is of money (@fig-totalchildren), from @palmerpenguins.
+Some of our data is of money (@fig-totalchildren), from @opendatatoronto.
 
 ```{r}
 #| label: fig-totalchildren
@@ -175,7 +186,7 @@ census_graph_population<-
 census_graph_population
 ```
 
-Some of our data is of money (@fig-avgincome), from @palmerpenguins.
+Some of our data is of money (@fig-avgincome), from @opendatatoronto.
 
 ```{r}
 #| label: fig-avgincome
