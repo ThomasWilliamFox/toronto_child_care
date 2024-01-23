@@ -6,9 +6,7 @@ This repo provides students with a foundation for their own projects associated 
 
 To use this folder, click the green "Code" button", then "Download ZIP". Move the downloaded folder to where you want to work on your own computer, and then modify it to suit.
 
-## LLM
-
-LLMs were not used in the writing of this paper. 
+**Statement on LLM usage: LLMs were not used in the writing of this paper.** 
 
 ## File Structure
 

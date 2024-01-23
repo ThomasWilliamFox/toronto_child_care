@@ -1,6 +1,6 @@
 ---
-title: "Licensed Child Care Spaces in Toronto" 
-subtitle: ""
+title: "Licensed Child Care Spaces in Toronto's 25 Wards" 
+subtitle: "Investigating the impact of average income and child population"
 author: 
   - Thomas Fox
 thanks: "Code and data are available at: https://github.com/ThomasWilliamFox/toronto_child_care"
@@ -75,10 +75,14 @@ The remainder of this paper is structured as follows(@citeR).
 [@janitor]
 [@plyr]
 
+The remainder of this paper is structured as follows(@citeR). 
+ 
 
 # Data {#sec-data}
 
-Some of our data is of penguins (@fig-totalspots), from @opendatatoronto.
+## Licensed Child Care Centres in Toronto 
+
+The first data set I explored is... (@tbl-childcaredata) from @opendatatoronto.
 
 
 ```{r}
@@ -96,39 +100,7 @@ head(child_care, 6) |>
 
 ```
 
-```{r}
-#| label: tbl-censusdata
-#| tbl-cap: Sample of Cleaned 2021 Canada Census Data
-#| echo: false
-#| warning: false
-
-# Ref from https://github.com/christina-wei/INF3104-1-Covid-Clinics/blob/main/outputs/paper/covid_clinics.qmd
-head(census_data, 6) |>
-  kable(
-    col.names = c("Ward Number", "Age 0-4", "Age 5-9", "Age 10-14", "Average Household Income", "Median Household Income"),
-    booktabs = TRUE
-  )
-```
-
-```{r}
-#| label: tbl-mergeddata
-#| tbl-cap: Sample of Toronto Licensed Child Care and 2021 Census Data
-#| echo: false
-#| warning: false
-
-# Ref from https://github.com/christina-wei/INF3104-1-Covid-Clinics/blob/main/outputs/paper/covid_clinics.qmd
-
-merged_data <-
-  census_childcare_data |>
-  select(ward, avg_hh_income, total_spots, total_under_15)
-
-head(merged_data, 6) |>
-  kable(
-    col.names = c("Ward Number", "Average Household Income", "Child Care Spaces", "Population Aged 0 - 14"),
-    booktabs = TRUE
-  )
-
-```
+I then visualized the total child care spots per ward (@fig-totalspots) from @opendatatoronto.
 
 
 ```{r}
@@ -162,7 +134,27 @@ child_care_graph_1
 ```
 
 
-Some of our data is of money (@fig-totalchildren), from @opendatatoronto.
+## Toronto Ward Profiles Based on 2021 Canada Census Data  
+
+I then looked at the profiles of Toronto's 25 wards based on the 2021 Canada Census (@tbl-censusdata) from @opendatatoronto.
+
+```{r}
+#| label: tbl-censusdata
+#| tbl-cap: Sample of Cleaned 2021 Canada Census Data
+#| echo: false
+#| warning: false
+
+# Ref from https://github.com/christina-wei/INF3104-1-Covid-Clinics/blob/main/outputs/paper/covid_clinics.qmd
+head(census_data, 6) |>
+  kable(
+    col.names = c("Ward Number", "Age 0-4", "Age 5-9", "Age 10-14", "Average Household Income", "Median Household Income"),
+    booktabs = TRUE
+  )
+```
+
+
+I used this data to determine what number of the population is under the age of 15 in each ward (@fig-totalchildren).
+
 
 ```{r}
 #| label: fig-totalchildren
@@ -188,7 +180,8 @@ census_graph_population<-
 census_graph_population
 ```
 
-Some of our data is of money (@fig-avgincome), from @opendatatoronto.
+I then looked at what the average income was per ward (@fig-avgincome).
+
 
 ```{r}
 #| label: fig-avgincome
@@ -206,6 +199,10 @@ census_graph_income <-
   labs(x = "Ward arranged by average household income", y = "Average household income")
 census_graph_income
 ```
+## Investigation
+
+I then made a graph that displayed the number of child care spaces in each ward in acending order based on average household income (@fig-spacesbyincome) 
+
 
 ```{r}
 #| label: fig-spacesbyincome
@@ -223,6 +220,8 @@ spaces_by_ward <-
 
 spaces_by_ward
 ```
+
+I then constructed a scatter plot showing the number of children under the age of 14 per child care space in each ward arranged in ascending order by average household income (@fig-childrenspacesplot). 
 
 ```{r}
 #| label: fig-childrenspacesplot
@@ -250,24 +249,8 @@ suppressMessages(print(children_per_space_by_income))
 
 Talk more about it.
 
-And also planes (@fig-planes). (You can change the height and width, but don't worry about doing that until you have finished every other aspect of the paper - Quarto will try to make it look nice and the defaults usually work well once you have enough text.)
+And also planes. (You can change the height and width, but don't worry about doing that until you have finished every other aspect of the paper - Quarto will try to make it look nice and the defaults usually work well once you have enough text.)
 
-
-Talk way more about it. 
-
-# Discussion
-
-## First discussion point {#sec-first-point}
-
-If my paper were 10 pages, then should be be at least 2.5 pages. The discussion is a chance to show off what you know and what you learnt from all this. 
-
-## Second discussion point
-
-## Third discussion point
-
-## Weaknesses and next steps
-
-Weaknesses and next steps should also be included.
 
 \newpage
 
@@ -275,18 +258,25 @@ Weaknesses and next steps should also be included.
 
 # Appendix {-}
 
+```{r}
+#| label: tbl-mergeddata
+#| tbl-cap: Sample of Merged Licensed Child Care Centres in Toronto and Ward Profiles (2021 Census Data) used to build graphs
+#| echo: false
+#| warning: false
 
-# Additional data details
+# Ref from https://github.com/christina-wei/INF3104-1-Covid-Clinics/blob/main/outputs/paper/covid_clinics.qmd
 
+merged_data <-
+  census_childcare_data |>
+  select(ward, avg_hh_income, total_spots, total_under_15)
 
+head(merged_data, 6) |>
+  kable(
+    col.names = c("Ward Number", "Average Household Income", "Child Care Spaces", "Population Aged 0 - 14"),
+    booktabs = TRUE
+  )
 
-## Diagnostics
-
-@fig-stanareyouokay-1 is a trace plot. It shows... This suggests...
-
-@fig-stanareyouokay-2 is a Rhat plot. It shows... This suggests...
-
-
+```
 
 
 \newpage
