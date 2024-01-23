@@ -17,9 +17,12 @@ bibliography: references.bib
 #| include: false
 #| warning: false
 #| message: false
+
 library(tidyverse)
 library(palmerpenguins)
 library(here)
+library(knitr)
+library(tinytex)
 ```
 
 
@@ -34,10 +37,9 @@ The remainder of this paper is structured as follows(@citeR). @sec-data....
 
 Some of our data is of penguins (@fig-totalspots), from @palmerpenguins.
 
-
 ```{r}
-#| label: fig-totalspots
-#| fig-cap: Total number of child-care spaces by ward
+#| label: tbl-initialdata
+#| tbl-cap: Population under 15 years of age by ward
 #| echo: false
 #| warning: false
 
@@ -46,6 +48,22 @@ Some of our data is of penguins (@fig-totalspots), from @palmerpenguins.
   file = here("outputs/data/merged_ward_data.csv"),
   show_col_types = FALSE
 )
+
+#Referenced from https://github.com/christina-wei/INF3104-1-Covid-Clinics/blob/main/outputs/paper/covid_clinics.qmd
+
+head(census_childcare_data, 6) |>
+  kable(
+    col.names = c("Ward Number", "0 - 4", "5 - 9", "10 - 14", "Average Household Income", "Median Household Income", "Total Child Care Spaces", "Total Population Under 15"),
+    booktabs = TRUE
+  )
+
+```
+
+```{r}
+#| label: fig-totalspots
+#| fig-cap: Total number of child-care spaces by ward
+#| echo: false
+#| warning: false
 
 # read ward names
 ward_names = read_csv(
@@ -76,6 +94,7 @@ child_care_graph_1 <-
 
 child_care_graph_1
 ```
+
 
 Some of our data is of money (@fig-totalchildren), from @palmerpenguins.
 
