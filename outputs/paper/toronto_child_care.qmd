@@ -1,6 +1,6 @@
 ---
-title: "My title"
-subtitle: "My subtitle if needed"
+title: "Licensed Child Care Spaces in Toronto" 
+subtitle: ""
 author: 
   - Thomas Fox
 thanks: "Code and data are available at: https://github.com/ThomasWilliamFox/toronto_child_care"
@@ -17,12 +17,42 @@ bibliography: references.bib
 #| include: false
 #| warning: false
 #| message: false
+#| echo: false
 
 library(tidyverse)
 library(palmerpenguins)
 library(here)
 library(knitr)
 library(tinytex)
+```
+
+```{r}
+#| echo: false
+#| message: false
+
+# read cleaned child care data
+child_care = read_csv(
+  file = here("outputs/data/child_care_data.csv"),
+  show_col_types = FALSE
+)
+
+# read cleaned census data
+census_data = read_csv(
+  file = here("outputs/data/census_data.csv"),
+  show_col_types = FALSE
+)
+
+# read cleaned merged child care/census data
+ census_childcare_data = read_csv(
+  file = here("outputs/data/merged_ward_data.csv"),
+  show_col_types = FALSE
+)
+
+# read ward names
+ward_names = read_csv(
+  file = here("outputs/data/ward_names.csv"),
+  show_col_types = FALSE
+)
 ```
 
 
@@ -37,39 +67,62 @@ The remainder of this paper is structured as follows(@citeR). @sec-data....
 
 Some of our data is of penguins (@fig-totalspots), from @palmerpenguins.
 
+
 ```{r}
-#| label: tbl-initialdata
-#| tbl-cap: Population under 15 years of age by ward
+#| label: tbl-childcaredata
+#| tbl-cap: Sampled of Cleaned Toronto Licensed Child Care Data
 #| echo: false
 #| warning: false
 
-# read cleaned child care data
- census_childcare_data = read_csv(
-  file = here("outputs/data/merged_ward_data.csv"),
-  show_col_types = FALSE
-)
-
-#Referenced from https://github.com/christina-wei/INF3104-1-Covid-Clinics/blob/main/outputs/paper/covid_clinics.qmd
-
-head(census_childcare_data, 6) |>
+# Ref from https://github.com/christina-wei/INF3104-1-Covid-Clinics/blob/main/outputs/paper/covid_clinics.qmd
+head(child_care, 6) |>
   kable(
-    col.names = c("Ward Number", "0 - 4", "5 - 9", "10 - 14", "Average Household Income", "Median Household Income", "Total Child Care Spaces", "Total Population Under 15"),
+    col.names = c("Facility ID", " Ward Number", "Total Spaces", "Type"),
     booktabs = TRUE
   )
 
 ```
 
 ```{r}
+#| label: tbl-censusdata
+#| tbl-cap: Sample of Cleaned 2021 Canada Census Data
+#| echo: false
+#| warning: false
+
+# Ref from https://github.com/christina-wei/INF3104-1-Covid-Clinics/blob/main/outputs/paper/covid_clinics.qmd
+head(census_data, 6) |>
+  kable(
+    col.names = c("Ward Number", "Age 0-4", "Age 5-9", "Age 10-14", "Average Household Income", "Median Household Income"),
+    booktabs = TRUE
+  )
+```
+
+```{r}
+#| label: tbl-mergeddata
+#| tbl-cap: Sample of Toronto Licensed Child Care and 2021 Census Data
+#| echo: false
+#| warning: false
+
+# Ref from https://github.com/christina-wei/INF3104-1-Covid-Clinics/blob/main/outputs/paper/covid_clinics.qmd
+
+merged_data <-
+  census_childcare_data |>
+  select(ward, avg_hh_income, total_spots, total_under_15)
+
+head(merged_data, 6) |>
+  kable(
+    col.names = c("Ward Number", "Average Household Income", "Child Care Spaces", "Population Aged 0 - 14"),
+    booktabs = TRUE
+  )
+
+```
+
+
+```{r}
 #| label: fig-totalspots
 #| fig-cap: Total number of child-care spaces by ward
 #| echo: false
 #| warning: false
-
-# read ward names
-ward_names = read_csv(
-  file = here("outputs/data/ward_names.csv"),
-  show_col_types = FALSE
-)
 
 # turn ward_names into list for graph substitution with ward numbers 
 ward_name_list <- as.list(ward_names$ward_name)
@@ -90,7 +143,7 @@ child_care_graph_1 <-
   geom_bar(stat = "identity") +
   theme_minimal() +
   theme(axis.text.x = element_text(size = 7, angle = 45, vjust = 1, hjust=1))+
-  labs(x = "Ward arranged by ward number", y = "Total child care spaces")
+  labs(x = "Ward", y = "Total child care spaces")
 
 child_care_graph_1
 ```
@@ -103,12 +156,6 @@ Some of our data is of money (@fig-totalchildren), from @palmerpenguins.
 #| fig-cap: Population under 15 years of age by ward
 #| echo: false
 #| warning: false
-
-# read cleaned census data
-census_data = read_csv(
-  file = here("outputs/data/census_data.csv"),
-  show_col_types = FALSE
-)
 
 # substitute ward numbers for names
 
@@ -123,7 +170,7 @@ census_graph_population<-
   geom_bar(stat = "identity") +
   theme_minimal() +
   theme(axis.text.x = element_text(size = 7, angle = 45, vjust = 1, hjust=1))+
-  labs(x = "Ward arranged by ward number", y = "Population under 15 years old") 
+  labs(x = "Ward", y = "Population under 15 years old") 
 
 census_graph_population
 ```
