@@ -1,12 +1,16 @@
 ---
 title: "Licensed Child Care Spaces in Toronto's 25 Wards" 
-subtitle: "Investigating the impact of average income and child population"
+subtitle: 
 author: 
   - Thomas Fox
 thanks: "Code and data are available at: https://github.com/ThomasWilliamFox/toronto_child_care"
 date: today
 date-format: long
-abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
+abstract: 
+"1) what was done, 2) what was found, and 3) why this matters (all at a high level). Likely four sentences. Abstract must make clear what we learn about the world because of this paper."
+
+"Analysis of licensed child care facilities, child population, and average household income in Toronto's 25 wards. Investigation reveals a negative correlation between children per child care space and average household income by ward. This finding suggests a lack of access and equity to licensed childcare facilities based on average household income."
+
 format: pdf
 number-sections: true
 toc: true
@@ -60,6 +64,14 @@ ward_names = read_csv(
 
 
 # Introduction
+1) broader context to motivate
+2) some detail about what the paper is about; 
+3) a clear gap that needs to be filled; 
+4) what was done; 
+5) what was found; 
+6) why it is important; 
+7) the structure of the paper. 
+A reader should be able to read only the introduction and know what was done, why, and what was found. Likely 3 or 4 paragraphs, or 10 per cent of total.
 
 You can and should cross-reference sections and sub-sections. 
 
@@ -79,7 +91,19 @@ The remainder of this paper is structured as follows(@citeR).
  
 
 # Data {#sec-data}
+A sense of the dataset should be communicated to the reader. 
 
+The broader context of the dataset should be discussed. 
+
+All variables should be thoroughly examined and explained. 
+
+Explain if there were similar datasets that could have been used and why they were not. 
+
+If variables were constructed then this should be mentioned, and high-level cleaning aspects of note should be mentioned, but this section should focus on the destination, not the journey. 
+
+It is important to understand what the variables look like by including graphs, and possibly tables, of all observations, along with discussion of those graphs and the other features of these data. 
+
+Summary statistics should also be included, and well as any relationships between the variables. If this becomes too detailed, then appendices could be used.
 ## Licensed Child Care Centres in Toronto 
 
 The first data set I explored is... (@tbl-childcaredata) from @opendatatoronto.
@@ -163,7 +187,6 @@ I used this data to determine what number of the population is under the age of 
 #| warning: false
 
 # substitute ward numbers for names
-
 for (x in 1:25) {
   census_data$ward[census_data$ward == x] = ward_name_list[[x]]
 } 
@@ -210,6 +233,7 @@ I then made a graph that displayed the number of child care spaces in each ward 
 #| echo: false
 #| warning: false
 
+# Construct graph 
 spaces_by_ward <- 
   census_childcare_data|>
   ggplot(aes(x = reorder(ward, avg_hh_income), y = total_spots)) +
@@ -229,13 +253,9 @@ I then constructed a scatter plot showing the number of children under the age o
 #| echo: false
 #| warning: false
 
-census_childcare_by_income <-
-  arrange(census_childcare_data, avg_hh_income)
-
-
+# Construct graph 
 children_per_space_by_income <- 
   census_childcare_by_income |>
-# Change the point size, and shape
   ggplot(aes(x=reorder(ward, avg_hh_income), y= total_under_15/total_spots)) +
   geom_point(fill= "black", size=1, shape=23) +
   geom_smooth(mapping = aes(x=1:25, y = total_under_15/total_spots), method=lm, se=FALSE) +
