@@ -11,6 +11,7 @@
 library(tidyverse)
 library(dplyr)
 library(janitor)
+library(plyr)
 
 #### Clean data ####
 
@@ -24,6 +25,18 @@ names(childcare_data)
 cleaned_childcare_data <- 
   clean_names(data) |>
   select(x_id, ward, totspace, auspice) 
+
+# Counts for paper 
+
+# 703 Facilities are Non-Profit Agencies
+ldply(cleaned_childcare_data, function(c) sum(c =="Non Profit Agency"))
+
+# 321 Facilities are Commercial Agencies 
+ldply(cleaned_childcare_data, function(c) sum(c =="Commercial Agency"))
+
+# 39 Facilities are City Operated 
+ldply(cleaned_childcare_data, function(c) sum(c =="Public (City Operated) Agency"))
+
 
 # Summarize child data by total spots
 summarized_child_care_data <-

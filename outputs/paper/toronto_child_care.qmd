@@ -29,6 +29,7 @@ library(janitor)
 ```
 
 ```{r}
+#| include: false
 #| echo: false
 #| message: false
 
@@ -72,6 +73,7 @@ The remainder of this paper is structured as follows(@citeR).
 [@opendatatoronto]
 [@dplyr]
 [@janitor]
+[@plyr]
 
 
 # Data {#sec-data}
