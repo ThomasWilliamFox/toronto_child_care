@@ -28,6 +28,8 @@ library(tinytex)
 library(opendatatoronto)
 library(dplyr)
 library(janitor)
+
+usethis::git_vaccinate()
 ```
 
 ```{r}
