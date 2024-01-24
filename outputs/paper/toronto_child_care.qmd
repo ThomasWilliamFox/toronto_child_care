@@ -1,15 +1,12 @@
 ---
 title: "Licensed Child Care Spaces in Toronto's 25 Wards" 
-subtitle: 
+subtitle: ""
 author: 
   - Thomas Fox
 thanks: "Code and data are available at: https://github.com/ThomasWilliamFox/toronto_child_care"
 date: today
 date-format: long
-abstract: 
-"1) what was done, 2) what was found, and 3) why this matters (all at a high level). Likely four sentences. Abstract must make clear what we learn about the world because of this paper."
-
-"Analysis of licensed child care facilities, child population, and average household income in Toronto's 25 wards. Investigation reveals a negative correlation between children per child care space and average household income by ward. This finding suggests a lack of access and equity to licensed childcare facilities based on average household income."
+abstract: "Analysis of licensed child care facilities, child population, and average household income in Toronto's 25 wards. Investigation reveals a negative correlation between children per child care space and average household income by ward. This suggests increased competition for child caare spaces in wards with lower income as well as decreased competition for child care spaces in wards with higher incomes. This finding demonstrates a lack of equity surrounding access to licensed childcare facilities in Torotno based on a ward's average household income."
 
 format: pdf
 number-sections: true
@@ -64,6 +61,15 @@ ward_names = read_csv(
 
 
 # Introduction
+
+Access to child care is vital to the social and economic health of a community such as the City of Toronto. Accessible child care has been shown to influence occupational and educational opportunities for parents, especially those in low-income situations [@childcare]. This leads to increased economic prosperity for parents and families which in turn, brings positive impacts to their physical and social well-being [@childcare]. Child care access also has an impact on the health and development of children who attend these facilities [@rhijn]. Vulnerable children greatly benefit from child care access as these centers help to facilitate early intervention methods [@underwood]. Equitable access to child care is therefore an important facet of community health and development.  
+
+This paper explores data made available by Open Data Toronto [@opendatatoronto] related to licensed child care facilities and city ward profiles to explore the relationship between child care access and ward demographics. The data was analyzed and processed with the programming language R [@citeR]. Various packages were also used in the processing, cleaning, and presentation of this information such as tidyverse [@tidyverse], here [@here], knitr [@knitr], tinytex [@tinytex], dplyr [@dplyr], janitor [@janitor], and plyr [@plyr]. 
+
+This analysis shows a negative correlation between the number of children in a ward per existing child care space and average household income ([see @sec-investigation]). This suggests that lower income wards experience greater competition for child care access and higher income wards experience less competition. This finding demonstrates a trend of inequitable access to child care across the city of Toronto. As child care access plays a central role in the social and economic well-being of communities, and has an especially positive impact on vulnerable children and low-income families, these findings support measures and initiatives aimed at ensuring more equitable access to child care in the City of Toronto [see @strategy].
+
+The remainder of this paper is structured as follows(@citeR). 
+
 1) broader context to motivate
 2) some detail about what the paper is about; 
 3) a clear gap that needs to be filled; 
@@ -74,18 +80,6 @@ ward_names = read_csv(
 A reader should be able to read only the introduction and know what was done, why, and what was found. Likely 3 or 4 paragraphs, or 10 per cent of total.
 
 You can and should cross-reference sections and sub-sections. 
-
-The remainder of this paper is structured as follows(@citeR). 
-
-[@citeR]
-[@tidyverse] 
-[@here]
-[@knitr]
-[@tinytex]
-[@opendatatoronto]
-[@dplyr]
-[@janitor]
-[@plyr]
 
 The remainder of this paper is structured as follows(@citeR). 
  
@@ -104,7 +98,8 @@ If variables were constructed then this should be mentioned, and high-level clea
 It is important to understand what the variables look like by including graphs, and possibly tables, of all observations, along with discussion of those graphs and the other features of these data. 
 
 Summary statistics should also be included, and well as any relationships between the variables. If this becomes too detailed, then appendices could be used.
-## Licensed Child Care Centres in Toronto 
+
+## Licensed Child Care Centres in Toronto {#sec-childcare}
 
 The first data set I explored is... (@tbl-childcaredata) from @opendatatoronto.
 
@@ -158,7 +153,7 @@ child_care_graph_1
 ```
 
 
-## Toronto Ward Profiles Based on 2021 Canada Census Data  
+## Toronto Ward Profiles Based on 2021 Canada Census Data  {#sec-wards}
 
 I then looked at the profiles of Toronto's 25 wards based on the 2021 Canada Census (@tbl-censusdata) from @opendatatoronto.
 
@@ -222,7 +217,7 @@ census_graph_income <-
   labs(x = "Ward arranged by average household income", y = "Average household income")
 census_graph_income
 ```
-## Investigation
+## Investigation {#sec-investigation}
 
 I then made a graph that displayed the number of child care spaces in each ward in acending order based on average household income (@fig-spacesbyincome) 
 
@@ -252,6 +247,10 @@ I then constructed a scatter plot showing the number of children under the age o
 #| fig-cap: Number of children per child care space by ward
 #| echo: false
 #| warning: false
+
+# Arrange merged data by average income (ascending)
+census_childcare_by_income <-
+  arrange(census_childcare_data, avg_hh_income)
 
 # Construct graph 
 children_per_space_by_income <- 
