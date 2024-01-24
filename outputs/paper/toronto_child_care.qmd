@@ -6,12 +6,13 @@ author:
 thanks: "Code and data are available at: https://github.com/ThomasWilliamFox/toronto_child_care"
 date: today
 date-format: long
-abstract: "Analysis of licensed child care facilities, child population, and average household income in Toronto's 25 wards. Investigation reveals a negative correlation between children per child care space and average household income by ward. This suggests increased competition for child caare spaces in wards with lower income as well as decreased competition for child care spaces in wards with higher incomes. This finding demonstrates a lack of equity surrounding access to licensed childcare facilities in Torotno based on a ward's average household income."
-
+abstract: "Analysis of licensed child care facilities, child population, and average household income in Toronto's 25 wards. Investigation reveals a negative correlation between children per child care space and average household income by ward. This suggests increased competition for child caare spaces in wards with lower income and decreased competition for child care spaces in wards with higher incomes. This finding demonstrates a lack of equity surrounding access to licensed childcare facilities in Toronto."
 format: pdf
 number-sections: true
 toc: true
 bibliography: references.bib
+nocite: |
+  @wei, @angelis
 ---
 
 ```{r}
@@ -19,6 +20,12 @@ bibliography: references.bib
 #| warning: false
 #| message: false
 #| echo: false
+
+# Formatting and presentation strategies used in this project were derived in part from both:
+# https://github.com/christina-wei/INF3104-1-Covid-Clinics/tree/main
+# &
+# https://github.com/InessaDeAngelis/Toronto_Elections
+# See references for full citations
 
 library(tidyverse)
 library(here)
@@ -68,45 +75,17 @@ This paper explores data made available by Open Data Toronto [@opendatatoronto] 
 
 This analysis shows a negative correlation between the number of children in a ward per existing child care space and average household income ([see @sec-investigation]). This suggests that lower income wards experience greater competition for child care access and higher income wards experience less competition. This finding demonstrates a trend of inequitable access to child care across the city of Toronto. As child care access plays a central role in the social and economic well-being of communities, and has an especially positive impact on vulnerable children and low-income families, these findings support measures and initiatives aimed at ensuring more equitable access to child care in the City of Toronto [see @strategy].
 
-The remainder of this paper is structured as follows(@citeR). 
-
-1) broader context to motivate
-2) some detail about what the paper is about; 
-3) a clear gap that needs to be filled; 
-4) what was done; 
-5) what was found; 
-6) why it is important; 
-7) the structure of the paper. 
-A reader should be able to read only the introduction and know what was done, why, and what was found. Likely 3 or 4 paragraphs, or 10 per cent of total.
-
-You can and should cross-reference sections and sub-sections. 
-
-The remainder of this paper is structured as follows(@citeR). 
- 
+The remainder of this paper outlines the data, the data analysis, and an investigation of the findings. [@sec-data] contains three sub-sections. [@sec-childcare] outlines the "Licensed Child Care Centres" data set [@caredata] provided by the opendatatoronto [@opendatatoronto]. [@sec-wards] explores the "Ward Profiles (25-Ward Model)" data set [@wards] also provided by the opendatatoronto [@opendatatoronto]. [@sec-investigation] investigates aspects of both data sets and their relationship. 
 
 # Data {#sec-data}
-A sense of the dataset should be communicated to the reader. 
-
-The broader context of the dataset should be discussed. 
-
-All variables should be thoroughly examined and explained. 
-
-Explain if there were similar datasets that could have been used and why they were not. 
-
-If variables were constructed then this should be mentioned, and high-level cleaning aspects of note should be mentioned, but this section should focus on the destination, not the journey. 
-
-It is important to understand what the variables look like by including graphs, and possibly tables, of all observations, along with discussion of those graphs and the other features of these data. 
-
-Summary statistics should also be included, and well as any relationships between the variables. If this becomes too detailed, then appendices could be used.
 
 ## Licensed Child Care Centres in Toronto {#sec-childcare}
 
-The first data set I explored is... (@tbl-childcaredata) from @opendatatoronto.
-
+The "Licensed Child Care Centres" data set is provided to Open Data Toronto (@opendatatoronto) by the City's Children's Services division [@caredata]. The data set contains 1,063 entries which correspond to each licensed child care facility in Toronto. The variables chosen to include in the cleaned data set are the facility ID number, ward number where the facility is located, total number of individual child care spaces at the facility, and the facility's operation type (Commercial, Non Profit or Public). @tbl-childcaredata shows the first 6 entries in this data set. 
 
 ```{r}
 #| label: tbl-childcaredata
-#| tbl-cap: Sampled of Cleaned Toronto Licensed Child Care Data
+#| tbl-cap: Sample of Cleaned Toronto Licensed Child Care Data
 #| echo: false
 #| warning: false
 
@@ -119,8 +98,7 @@ head(child_care, 6) |>
 
 ```
 
-I then visualized the total child care spots per ward (@fig-totalspots) from @opendatatoronto.
-
+@fig-totalspots displays the total individual child care spaces found in each of Toronto's 25 wards. Among the wards with the least amount of child care spaces are Scarborough-Rouge Park with 1909 spaces, Scarborough North with 2078 spaces, and Etobicoke North with 2089. The wards with the greatest number of child care spaces are Beaches-East York with 4598, Toronto-Danforth	with 4894, and Etobicoke-Lakeshore with 4910. 
 
 ```{r}
 #| label: fig-totalspots
@@ -155,7 +133,7 @@ child_care_graph_1
 
 ## Toronto Ward Profiles Based on 2021 Canada Census Data  {#sec-wards}
 
-I then looked at the profiles of Toronto's 25 wards based on the 2021 Canada Census (@tbl-censusdata) from @opendatatoronto.
+The "Ward Profiles (25-Ward Model)" data set is provided to Open Data Toronto (@opendatatoronto) by Toronto City Planning [@wards]. This resource contains three separate data sub-sets. Statistics Canada Census data related to Toronto's 25 wards from 2011, 2016, and 2021 is found in the first sub-set. Geographic locations of each ward can be found in the second sub-set, followed by a sub-set containing each ward number and its corresponding name. The data sets of interest in this paper are the "2023-WardProfiles-2011-2021-CensusData" set which is used to determine demographic information related to each ward, and the "25-WardNames-Numbers" set that is used to help with data visualization in this paper [@wards]. Variables isolated from the 2021 Canada Census include ward number, average household income, median household income and population counts for age ranges: 0 - 4, 5 - 9, and 10 - 14. @tbl-censusdata shows the first six entries in the cleaned data set.
 
 ```{r}
 #| label: tbl-censusdata
@@ -172,8 +150,27 @@ head(census_data, 6) |>
 ```
 
 
-I used this data to determine what number of the population is under the age of 15 in each ward (@fig-totalchildren).
+@fig-totalspots displays the total individual child care spaces found in each of Toronto's 25 wards. Among the wards with the least amount of child care spaces are Scarborough-Rouge Park with 1909 spaces, Scarborough North with 2078 spaces, and Etobicoke North with 2089. The wards with the greatest number of child care spaces are Beaches-East York with 4598, Toronto-Danforth	with 4894, and Etobicoke-Lakeshore with 4910. 
 
+A sense of the dataset should be communicated to the reader. 
+
+The broader context of the dataset should be discussed. 
+
+All variables should be thoroughly examined and explained. 
+
+Explain if there were similar datasets that could have been used and why they were not. 
+
+If variables were constructed then this should be mentioned, and high-level cleaning aspects of note should be mentioned, but this section should focus on the destination, not the journey. 
+
+It is important to understand what the variables look like by including graphs, and possibly tables, of all observations, along with discussion of those graphs and the other features of these data. 
+
+Summary statistics should also be included, and well as any relationships between the variables. If this becomes too detailed, then appendices could be used.
+```{r}
+ordereddata <-
+  census_childcare_data |>
+  arrange(total_spots)
+tail(ordereddata)
+```
 
 ```{r}
 #| label: fig-totalchildren
@@ -299,7 +296,6 @@ head(merged_data, 6) |>
 
 
 \newpage
-
 
 # References
 
