@@ -10,6 +10,7 @@ Run:
 
 -   `scripts/01-download_data.R` to download the required data sets from Open Data Toronto.
 -   `scripts/02-data_cleaning.R` to clean all relevant data for producing paper
+-   `scripts/03-test_data.R` to test clean data sets
 
 Run/Render:
 
