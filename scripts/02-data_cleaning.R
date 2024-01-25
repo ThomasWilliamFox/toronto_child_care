@@ -4,7 +4,7 @@
 # Date: 21 January 2024
 # Contact: thomas.fox@mail.utoronto.ca
 # License: MIT
-# Pre-requisites: n/a
+# Pre-requisites: run 01-download_data.R
 # Any other information needed? n/a
 
 #### Workspace setup ####
