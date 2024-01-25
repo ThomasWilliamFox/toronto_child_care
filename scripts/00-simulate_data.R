@@ -126,3 +126,10 @@ sim_test_5_min <- min(simulated_census_data$sim_avg_hh_income)
 sim_test_5 <- sim_test_5_max <= 200000 && sim_test_5_min >= 60000
 sim_test_5
 
+# Test 6 - Verify average income column data is an integer
+sim_test_6 <- class(simulated_census_data$sim_child_population)
+sim_test_6 <= "integer"
+
+
+
+

@@ -44,8 +44,6 @@ ward_name_data <- read_csv("inputs/data/raw_ward_names.csv")
 ward_name_data <- 
   clean_names(ward_name_data)
 
-ward_name_data
-
 
 # Read and clean 2021 Canada census data
 
@@ -54,15 +52,12 @@ census_data <- read_csv("inputs/data/raw_census_data.csv")
 # Get subset of data covering total population and population under 14 by ward 
 population_data <- census_data[c(19:21),c(1,3:27)]
 
-population_data
-
 # Get subset of data covering average/total/and median household incomes by ward
 income_data <- census_data[c(1383:1384),c(1,3:27)]
-income_data
+
 
 # Merges income and population subsets together 
 census_data_merged <- rbind(population_data, income_data)
-census_data_merged
 
 # Transposes x and y axis  
 cleaned_census_data_temp <- t(census_data_merged)
@@ -73,7 +68,6 @@ cleaned_census_df <-
 
 # Converts data frame to tibble 
 cleaned_census_data <- tibble(cleaned_census_df)
-cleaned_census_data
 
 # Uses first row as names of variables 
 cleaned_census_data <- cleaned_census_data |>

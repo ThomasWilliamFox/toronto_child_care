@@ -5,7 +5,7 @@
 # Contact: thomas.fox@mail.utoronto.ca
 # License: MIT
 # Pre-requisites: run 01-download_data.R and 02-data_cleaning.R
-# Any other information needed? n/a
+# Any other information needed? If nothing is printed, all tests have passed
 
 
 #### Workspace setup ####
@@ -44,15 +44,80 @@ test_ward_names = read_csv(
 
 # Test cleaned child care data 
 
-if (test_child_care.length != 1064) {
-  
+if (nrow(test_child_care) != 1063) {
+  print("Size of child care data is incorrect ")
 }
-test_child_care 
 
-test_census_data 
+if (min(test_child_care$totspace) < 0) {
+  print("Negative number in child care data total space column")
+}
 
-test_census_childcare_data
+if (min(test_child_care$ward) <= 0) {
+  print("A ward number is below the limits ward number limit (1-25)")
+}
 
-test_ward_names
+if (max(test_child_care$ward) > 25) {
+  print("A ward number is above the ward number limit (1-25)")
+}
+
+# Test cleaned child care data 
+
+if (nrow(test_census_data) != 25) {
+  print("Number of ward entries is incorrect")
+}
+
+if (min(test_census_data$avg_hh_income) < 0) {
+  print("Negative number in average house hold income column")
+}
+
+if (min(test_census_data$pop_0_to_4) < 0) {
+  print("Negative number in population 0 to 4 column")
+}
+
+if (min(test_census_data$ward) <= 0) {
+  print("A ward number is below the limits ward number limit (1-25)")
+}
+
+if (max(test_census_data$ward) > 25) {
+  print("A ward number is above the ward number limit (1-25)")
+}
+
+
+# Test merged cleaned child care and census data 
+
+if (nrow(test_census_childcare_data) != 25) {
+  print("Number of ward entries is incorrect")
+}
+
+if (min(test_census_childcare_data$ward) <= 0) {
+  print("A ward number is below the limits ward number limit (1-25)")
+}
+
+if (max(test_census_childcare_data$ward) > 25) {
+  print("A ward number is above the ward number limit (1-25)")
+}
+
+if (min(test_census_childcare_data$avg_hh_income) < 0) {
+  print("Negative number in average house hold income column")
+}
+
+if (min(test_census_childcare_data$pop_0_to_4) < 0) {
+  print("Negative number in population 0 to 4 column")
+}
+
+# Test ward names 
+
+if (nrow(test_ward_names) != 25) {
+  print("Number of ward entries is incorrect")
+}
+
+if (class(test_ward_names$ward_name) != "character") {
+  print("Ward names is not a character")
+}
+
+if (class(test_ward_names$ward_number) != "numeric") {
+  print("Ward numbers are not numeric")
+}
+
 
 
