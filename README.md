@@ -1,8 +1,8 @@
-# Licensed Child Care Access Toronto's 25 Wards
+# Licensed Child Care Access in Toronto
 
 ## Overview
 
-This repo includes all files needed to reproduce my paper "Licensed Child Care Access in Toronto ". This paper explores the child care facilities, income statistics, and child population in Toronto's 25 wards to assess the prevalence of and access to child care throughout the city of Toronto.
+This repo includes all files needed to reproduce my paper "Licensed Child Care Access in Toronto". This paper explores the child care facilities, income statistics, and child population in Toronto's 25 wards to assess the prevalence of and access to child care throughout the city.
 
 To use this folder, click the green "Code" button", then "Download ZIP". Move the downloaded folder to where you want to work on your own computer.
 
